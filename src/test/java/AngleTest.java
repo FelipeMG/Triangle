@@ -9,8 +9,8 @@ public class AngleTest {
 	@Test
 	public void testGradConversion(){
 		
-		Angle angle = new Angle(120, AngleUnit.GRAD);
-		double number = 120;
+		Angle angle = new Angle(120.0, AngleUnit.GRAD);
+		Double number = 120.0;
 		assertEquals(number, angle.getAngleMeasure(),0.01);
 		angle.toRad();
 		System.out.println(angle.getAngleMeasure());

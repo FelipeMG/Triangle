@@ -1,10 +1,10 @@
 
 public class Angle {
 	
-	private double angleMeasure;
+	private Double angleMeasure;
 	private AngleUnit unit;
 
-	public Angle(double angleMeasure, AngleUnit unit){
+	public Angle(Double angleMeasure, AngleUnit unit){
 		if(angleMeasure>0){
 			this.angleMeasure = angleMeasure;
 			this.unit = unit;
@@ -24,11 +24,11 @@ public class Angle {
 		this.unit = AngleUnit.RAD;
 	}
 
-	public double getAngleMeasure() {
+	public Double getAngleMeasure() {
 		return angleMeasure;
 	}
 
-	public void setAngleMeasure(double angleMeasure) {
+	public void setAngleMeasure(Double angleMeasure) {
 		this.angleMeasure = angleMeasure;
 	}
 
