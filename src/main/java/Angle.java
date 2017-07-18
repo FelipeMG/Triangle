@@ -1,43 +1,27 @@
 
 public class Angle {
 	
-	private Double angleMeasure;
-	private AngleUnit unit;
-
-	public Angle(Double angleMeasure, AngleUnit unit){
-		if(angleMeasure>0){
-			this.angleMeasure = angleMeasure;
-			this.unit = unit;
-		}
-		else{
-			throw new IllegalArgumentException("Angle should be greater than 0");
-		}
+	private double measure;
+	private boolean degrees;
+	
+	private Angle(final double measure, final boolean degrees) {
+		this.measure = measure;
+		this.degrees = degrees;
 	}
 	
-	public void toGrad(){
-		this.angleMeasure = this.angleMeasure * 180 / Math.PI;
-		this.unit = AngleUnit.GRAD;
+	public static Angle degree(final double measure) {
+		return new Angle(measure, true);
 	}
 	
-	public void toRad(){
-		this.angleMeasure = this.angleMeasure * Math.PI / 180;
-		this.unit = AngleUnit.RAD;
+	public static Angle radians(final double measure) {
+		return new Angle(measure, false);
 	}
-
-	public Double getAngleMeasure() {
-		return angleMeasure;
+	
+	public double asDegrees() {
+		return degrees ? this.measure : Math.toDegrees(this.measure);
 	}
-
-	public void setAngleMeasure(Double angleMeasure) {
-		this.angleMeasure = angleMeasure;
+	
+	public double asRadians() {
+		return degrees ? Math.toRadians(this.measure) : this.measure;
 	}
-
-	public AngleUnit getUnit() {
-		return unit;
-	}
-
-	public void setUnit(AngleUnit unit) {
-		this.unit = unit;
-	}	
-
 }

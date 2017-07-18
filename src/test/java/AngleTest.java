@@ -1,23 +1,19 @@
 import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 
-import org.junit.Assert;
 import org.junit.Test;
-
 
 public class AngleTest {
 
 	@Test
-	public void testGradConversion(){
-		
-		Angle angle = new Angle(120.0, AngleUnit.GRAD);
-		Double number = 120.0;
-		assertEquals(number, angle.getAngleMeasure(),0.01);
-		angle.toRad();
-		System.out.println(angle.getAngleMeasure());
-		angle.toGrad();
-		System.out.println(angle.getAngleMeasure());
-		assertEquals(number, angle.getAngleMeasure(),0.01);
-
-		
+	public void testDegree(){		
+		Angle angle = Angle.degree(180);
+		assertThat(180.0, is(angle.asDegrees()) );
+	}
+	
+	@Test
+	public void testRadians(){		
+		Angle angle = Angle.radians(2);
+		assertThat(2d, is(angle.asRadians()) );
 	}
 }
