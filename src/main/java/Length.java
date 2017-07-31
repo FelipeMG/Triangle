@@ -1,5 +1,5 @@
 
-public class Length {
+public class Length implements Comparable<Length>{
 	
 	private double measure;
 	
@@ -16,6 +16,11 @@ public class Length {
 	
 	public double getMeasure(){
 		return this.measure;
+	}
+
+	public int compareTo(Length other) {
+		double distance = (this.measure - other.measure)*10  ;
+		return (int)distance;
 	}
 
 }

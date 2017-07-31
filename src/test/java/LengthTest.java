@@ -7,9 +7,9 @@ import org.junit.Test;
 public class LengthTest {
 	
 	@Test
-	public void nonNegativeLength(){		
+	public void nonNegativeLength(){
 		Length length = Length.factory(3);
-		assertThat(3.0, is(length.getMeasure()));	
+		assertThat(3.0, is(length.getMeasure()));
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
