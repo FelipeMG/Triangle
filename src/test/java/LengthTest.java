@@ -8,18 +8,17 @@ public class LengthTest {
 	
 	@Test
 	public void nonNegativeLength(){
-		Length length = Length.of(3);
-		assertThat(3.0, is(length.getMeasure()));
+		assertThat(Length.of(3).getMeasure(), is(3.0));
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void negativeLength(){
-		Length length = Length.of(-3);
+		assertThat(Length.of(-3).getMeasure(), is(-3.0));
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void zeroLength(){
-		Length length = Length.of(0.0);	
+		assertThat(Length.of(0).getMeasure(), is(0.0));
 	}
 
 }

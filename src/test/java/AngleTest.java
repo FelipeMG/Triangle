@@ -6,14 +6,12 @@ import org.junit.Test;
 public class AngleTest {
 
 	@Test
-	public void testDegree(){		
-		Angle angle = Angle.degree(180);
-		assertThat(180.0, is(angle.asDegrees()) );
+	public void testDegree(){
+		assertThat(Angle.degree(180).asDegrees(), is(180.0));
 	}
 	
 	@Test
-	public void testRadians(){		
-		Angle angle = Angle.radians(2);
-		assertThat(2d, is(angle.asRadians()) );
+	public void testRadians(){
+		assertThat(Angle.radians(2).asRadians(), is(2.0));
 	}
 }
