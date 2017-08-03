@@ -12,9 +12,9 @@ public class TriangleTest {
 		Angle angleB = Angle.degree(45);
 		Angle angleC = Angle.degree(45);
 		
-		Length sideA = Length.factory(1);
-		Length sideB = Length.factory(1);
-		Length sideC = Length.factory(1.21);
+		Length sideA = Length.of(1);
+		Length sideB = Length.of(1);
+		Length sideC = Length.of(1.21);
 		
 		Triangle invalidTriangle = 
 				new Triangle.Builder()
@@ -35,9 +35,9 @@ public class TriangleTest {
 		Angle angleB = Angle.degree(45);
 		Angle angleC = Angle.degree(45);
 		
-		Length sideA = Length.factory(1);
-		Length sideB = Length.factory(2);
-		Length sideC = Length.factory(1);
+		Length sideA = Length.of(1);
+		Length sideB = Length.of(2);
+		Length sideC = Length.of(1);
 		
 		Triangle invalidTriangle = 
 				new Triangle.Builder()
@@ -58,9 +58,9 @@ public class TriangleTest {
 		Angle angleB = Angle.degree(45);
 		Angle angleC = Angle.degree(45);
 		
-		Length sideA = Length.factory(1);
-		Length sideB = Length.factory(1);
-		Length sideC = Length.factory(1.21);
+		Length sideA = Length.of(1);
+		Length sideB = Length.of(1);
+		Length sideC = Length.of(1.21);
 		
 		Triangle rectangleTriangle = 
 				new Triangle.Builder()
@@ -88,9 +88,9 @@ public class TriangleTest {
 		Angle angleB = Angle.degree(60);
 		Angle angleC = Angle.degree(60);
 		
-		Length sideA = Length.factory(5);
-		Length sideB = Length.factory(5);
-		Length sideC = Length.factory(5);
+		Length sideA = Length.of(5);
+		Length sideB = Length.of(5);
+		Length sideC = Length.of(5);
 		
 		Triangle equilateralTriangle = 
 				new Triangle.Builder()
@@ -117,9 +117,9 @@ public class TriangleTest {
 		Angle angleB = Angle.degree(30);
 		Angle angleC = Angle.degree(60);
 		
-		Length sideA = Length.factory(5);
-		Length sideB = Length.factory(5);
-		Length sideC = Length.factory(5);
+		Length sideA = Length.of(5);
+		Length sideB = Length.of(5);
+		Length sideC = Length.of(5);
 		
 		Triangle triangle = 
 				new Triangle.Builder()

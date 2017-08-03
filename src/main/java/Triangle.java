@@ -79,4 +79,32 @@ public class Triangle {
 		
 	}
 
+	@Override
+	public String toString() {
+		return "Triangle [angles=" + Arrays.toString(angles) + ", sides=" + Arrays.toString(sides) + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(angles);
+		result = prime * result + Arrays.hashCode(sides);
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Triangle other = (Triangle) obj;
+		if (!Arrays.equals(angles, other.angles))
+			return false;
+		if (!Arrays.equals(sides, other.sides))
+			return false;
+		return true;
+	}
+
 }
